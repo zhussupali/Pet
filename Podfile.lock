@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.4.4)
+  - KeychainAccess (4.1.0)
+  - Swinject (2.7.1)
+
+DEPENDENCIES:
+  - Alamofire (= 5.4.4)
+  - KeychainAccess (= 4.1.0)
+  - Swinject (= 2.7.1)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - KeychainAccess
+    - Swinject
+
+SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  KeychainAccess: 445e28864fe6d3458b41fa211bcdc39890e8bd5a
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+
+PODFILE CHECKSUM: 2df89090785a6a4d05b67bfedfe4520072aacb94
+
+COCOAPODS: 1.11.3
