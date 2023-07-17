@@ -15,6 +15,7 @@ end
 
 def providers_pods
     pod 'Alamofire', '5.4.4'
+    pod 'PromisesSwift', '2.0.0'
 end
 
 target 'Core' do

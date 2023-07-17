@@ -7,11 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6032BDA02A65629D001729A7 /* HomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032BD982A65629D001729A7 /* HomeProvider.swift */; };
+		6032BDA12A65629D001729A7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032BD9A2A65629D001729A7 /* User.swift */; };
+		6032BDA22A65629D001729A7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032BD9C2A65629D001729A7 /* Constants.swift */; };
+		6032BDA32A65629D001729A7 /* DataRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032BD9D2A65629D001729A7 /* DataRequest+Extensions.swift */; };
+		6032BDA42A65629D001729A7 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032BD9E2A65629D001729A7 /* Provider.swift */; };
+		6032BDA52A65629D001729A7 /* AlamofireNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032BD9F2A65629D001729A7 /* AlamofireNetwork.swift */; };
 		60495C802A62DC37004ADB9F /* Providers.h in Headers */ = {isa = PBXBuildFile; fileRef = 60495C7F2A62DC37004ADB9F /* Providers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A048994F12D5C5416883D4FF /* Pods_Providers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA36F6D78262CB965138163 /* Pods_Providers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6032BD982A65629D001729A7 /* HomeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeProvider.swift; sourceTree = "<group>"; };
+		6032BD9A2A65629D001729A7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6032BD9C2A65629D001729A7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6032BD9D2A65629D001729A7 /* DataRequest+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataRequest+Extensions.swift"; sourceTree = "<group>"; };
+		6032BD9E2A65629D001729A7 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		6032BD9F2A65629D001729A7 /* AlamofireNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireNetwork.swift; sourceTree = "<group>"; };
 		60495C7C2A62DC37004ADB9F /* Providers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Providers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60495C7F2A62DC37004ADB9F /* Providers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Providers.h; sourceTree = "<group>"; };
 		A4D08420817023EC09F8223B /* Pods-Providers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Providers.release.xcconfig"; path = "Target Support Files/Pods-Providers/Pods-Providers.release.xcconfig"; sourceTree = "<group>"; };
@@ -49,6 +61,42 @@
 			path = ../../Pods;
 			sourceTree = "<group>";
 		};
+		6032BD962A65629D001729A7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6032BD972A65629D001729A7 /* Provider */,
+				6032BD992A65629D001729A7 /* Entities */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6032BD972A65629D001729A7 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				6032BD982A65629D001729A7 /* HomeProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		6032BD992A65629D001729A7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				6032BD9A2A65629D001729A7 /* User.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		6032BD9B2A65629D001729A7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6032BD9C2A65629D001729A7 /* Constants.swift */,
+				6032BD9D2A65629D001729A7 /* DataRequest+Extensions.swift */,
+				6032BD9E2A65629D001729A7 /* Provider.swift */,
+				6032BD9F2A65629D001729A7 /* AlamofireNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		60495C722A62DC37004ADB9F = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +118,8 @@
 		60495C7E2A62DC37004ADB9F /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				6032BD962A65629D001729A7 /* Home */,
+				6032BD9B2A65629D001729A7 /* Network */,
 				60495C7F2A62DC37004ADB9F /* Providers.h */,
 			);
 			path = Providers;
@@ -180,6 +230,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6032BDA12A65629D001729A7 /* User.swift in Sources */,
+				6032BDA52A65629D001729A7 /* AlamofireNetwork.swift in Sources */,
+				6032BDA32A65629D001729A7 /* DataRequest+Extensions.swift in Sources */,
+				6032BDA02A65629D001729A7 /* HomeProvider.swift in Sources */,
+				6032BDA42A65629D001729A7 /* Provider.swift in Sources */,
+				6032BDA22A65629D001729A7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +377,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -353,6 +410,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
