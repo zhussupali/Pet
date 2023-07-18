@@ -39,7 +39,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04F2A282CC171B87D6623B9B /* Pods-Pet.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pet.production.xcconfig"; path = "../../Pods/Target Support Files/Pods-Pet/Pods-Pet.production.xcconfig"; sourceTree = "<group>"; };
+		5227E75E7909DD21C42BAA01 /* Pods-Pet.stage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pet.stage.xcconfig"; path = "../../Pods/Target Support Files/Pods-Pet/Pods-Pet.stage.xcconfig"; sourceTree = "<group>"; };
 		5B4CADF985B3CE5CBE15130F /* Pods_Pet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6032BE722A6572E8001729A7 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		6032BE732A6572F4001729A7 /* Stage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Stage.xcconfig; sourceTree = "<group>"; };
+		6032BE752A657310001729A7 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		60495B242A62BD17004ADB9F /* Pet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60495B272A62BD17004ADB9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60495B2B2A62BD17004ADB9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 		60495C452A62CEF7004ADB9F /* Providers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Providers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60495D4C2A62E39E004ADB9F /* UIAppDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAppDelegateConfigurator.swift; sourceTree = "<group>"; };
 		613F31BC4A04D275BFAEC09A /* Pods-Pet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pet.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-Pet/Pods-Pet.release.xcconfig"; sourceTree = "<group>"; };
+		7DC05C5E7218172FC095B16B /* Pods-Pet.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pet.development.xcconfig"; path = "../../Pods/Target Support Files/Pods-Pet/Pods-Pet.development.xcconfig"; sourceTree = "<group>"; };
 		941A0E564EAC30652F51D999 /* Pods-Pet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pet.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-Pet/Pods-Pet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +77,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6032BE712A6572B8001729A7 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				6032BE722A6572E8001729A7 /* Development.xcconfig */,
+				6032BE732A6572F4001729A7 /* Stage.xcconfig */,
+				6032BE752A657310001729A7 /* Production.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 		60495B1B2A62BD17004ADB9F = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +127,7 @@
 		60495C022A62BFE5004ADB9F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6032BE712A6572B8001729A7 /* Configs */,
 				60495C032A62C007004ADB9F /* Plists */,
 				60495C042A62C024004ADB9F /* Supporting Files */,
 			);
@@ -175,6 +192,9 @@
 			children = (
 				941A0E564EAC30652F51D999 /* Pods-Pet.debug.xcconfig */,
 				613F31BC4A04D275BFAEC09A /* Pods-Pet.release.xcconfig */,
+				7DC05C5E7218172FC095B16B /* Pods-Pet.development.xcconfig */,
+				5227E75E7909DD21C42BAA01 /* Pods-Pet.stage.xcconfig */,
+				04F2A282CC171B87D6623B9B /* Pods-Pet.production.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -328,8 +348,9 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		60495B362A62BD17004ADB9F /* Debug */ = {
+		6032BE6F2A656FFF001729A7 /* Stage */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6032BE732A6572F4001729A7 /* Stage.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -386,10 +407,101 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = Stage;
 		};
-		60495B372A62BD17004ADB9F /* Release */ = {
+		6032BE702A656FFF001729A7 /* Stage */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5227E75E7909DD21C42BAA01 /* Pods-Pet.stage.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KZAWAF35XQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pet/Resources/Plists/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zhussupali.Pet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Stage;
+		};
+		60495B362A62BD17004ADB9F /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6032BE722A6572E8001729A7 /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Development;
+		};
+		60495B372A62BD17004ADB9F /* Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6032BE752A657310001729A7 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -440,11 +552,11 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Production;
 		};
-		60495B392A62BD17004ADB9F /* Debug */ = {
+		60495B392A62BD17004ADB9F /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 941A0E564EAC30652F51D999 /* Pods-Pet.debug.xcconfig */;
+			baseConfigurationReference = 7DC05C5E7218172FC095B16B /* Pods-Pet.development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,11 +581,11 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = Development;
 		};
-		60495B3A2A62BD17004ADB9F /* Release */ = {
+		60495B3A2A62BD17004ADB9F /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 613F31BC4A04D275BFAEC09A /* Pods-Pet.release.xcconfig */;
+			baseConfigurationReference = 04F2A282CC171B87D6623B9B /* Pods-Pet.production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -498,7 +610,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Release;
+			name = Production;
 		};
 /* End XCBuildConfiguration section */
 
@@ -506,20 +618,22 @@
 		60495B1F2A62BD17004ADB9F /* Build configuration list for PBXProject "Pet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				60495B362A62BD17004ADB9F /* Debug */,
-				60495B372A62BD17004ADB9F /* Release */,
+				60495B362A62BD17004ADB9F /* Development */,
+				6032BE6F2A656FFF001729A7 /* Stage */,
+				60495B372A62BD17004ADB9F /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Production;
 		};
 		60495B382A62BD17004ADB9F /* Build configuration list for PBXNativeTarget "Pet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				60495B392A62BD17004ADB9F /* Debug */,
-				60495B3A2A62BD17004ADB9F /* Release */,
+				60495B392A62BD17004ADB9F /* Development */,
+				6032BE702A656FFF001729A7 /* Stage */,
+				60495B3A2A62BD17004ADB9F /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Production;
 		};
 /* End XCConfigurationList section */
 	};

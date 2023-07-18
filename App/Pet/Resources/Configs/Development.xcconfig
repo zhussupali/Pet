@@ -1,0 +1,12 @@
+//
+//  Development.xcconfig
+//  Pet
+//
+//  Created by Zhussupali on 17.07.2023.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_NAME = Pet Dev
+BASE_URL = https:/$()/jsonplaceholder.typicode.com/
