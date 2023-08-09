@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		601B9F512A83B5700016AC53 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601B9F502A83B5700016AC53 /* Environment.swift */; };
 		60495C582A62DB9F004ADB9F /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 60495C572A62DB9F004ADB9F /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F27C9D51847E44ECC0E5C665 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5C7DF7507D4BDA0FCFA346 /* Pods_Core.framework */; };
 /* End PBXBuildFile section */
@@ -15,6 +16,7 @@
 		10E994D196333A06B85F3A44 /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
 		4BE12A118EFF540D6E95376A /* Pods-Core.stage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.stage.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.stage.xcconfig"; sourceTree = "<group>"; };
 		5EACA5986AE5FCD60C476273 /* Pods-Core.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.production.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.production.xcconfig"; sourceTree = "<group>"; };
+		601B9F502A83B5700016AC53 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		60495C542A62DB9F004ADB9F /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60495C572A62DB9F004ADB9F /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		87B93D659DD34D20E1D0AE45 /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
@@ -47,6 +49,22 @@
 			path = ../../Pods;
 			sourceTree = "<group>";
 		};
+		601B9F4E2A83B5500016AC53 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				60495C572A62DB9F004ADB9F /* Core.h */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		601B9F4F2A83B55F0016AC53 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				601B9F502A83B5700016AC53 /* Environment.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		60495C4A2A62DB9F004ADB9F = {
 			isa = PBXGroup;
 			children = (
@@ -68,7 +86,8 @@
 		60495C562A62DB9F004ADB9F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				60495C572A62DB9F004ADB9F /* Core.h */,
+				601B9F4F2A83B55F0016AC53 /* Base */,
+				601B9F4E2A83B5500016AC53 /* Configs */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -125,6 +144,7 @@
 				TargetAttributes = {
 					60495C532A62DB9F004ADB9F = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
 					};
 				};
 			};
@@ -186,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				601B9F512A83B5700016AC53 /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +337,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F66E1D340A8276D672965E10 /* Pods-Core.development.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -327,6 +349,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +362,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -348,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5EACA5986AE5FCD60C476273 /* Pods-Core.production.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -359,6 +384,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -443,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4BE12A118EFF540D6E95376A /* Pods-Core.stage.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -454,6 +481,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,6 +494,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -8,7 +8,10 @@
 import Foundation
 import Promises
 
-public class Provider {
-    public static let shared = Provider()
-    let rest = AlamofireNetwork()
+public final class Provider {
+    let rest: AlamofireNetwork
+    
+    public init(rest: AlamofireNetwork) {
+        self.rest = rest
+    }
 }

@@ -6,33 +6,25 @@ public typealias DependencyContainer = Resolver
 
 final class DependencyContainerAssembly: Assembly {
     func assemble(container: Container) {
-        assembleSystemServices(container)
         assembleCustomServices(container)
         assembleNetwork(container)
     }
-
-    private func assembleSystemServices(_ container: Container) {
-//        container.register(UIApplication.self) { _ in
-//            UIApplication.shared
-//        }.inObjectScope(.container)
-//        container.register(NotificationCenter.self) { _ in
-//            NotificationCenter.default
-//        }.inObjectScope(.container)
-//        container.register(UNUserNotificationCenter.self) { _ in
-//            UNUserNotificationCenter.current()
-//        }.inObjectScope(.container)
-//        container.register(FileManager.self) { _ in
-//            FileManager.default
-//        }.inObjectScope(.container)
-//        container.register(CLLocationManager.self) { _ in
-//            CLLocationManager()
-//        }.inObjectScope(.transient)
-//        container.register(Calendar.self) { _ in
-//            Calendar.current
-//        }
-    }
     
     private func assembleNetwork(_ container: Container) {
+        container.register(AlamofireNetwork.self) { resolver in
+            AlamofireNetwork(
+                baseUrl: Environment.baseUrl
+//                ,
+//                auth: resolver.resolve(NetworkAuth.self)!,
+//                headersStorage: resolver.resolve(NetworkHeadersStorable.self)!,
+//                loggerLevel: Environment.isDebug ? .debug : .off,
+//                isDebugMenuShakeEnabled: Environment.isDebugMenuEnabled == "ENABLED",
+//                debugMenuIgnoredHosts: DebugMode.ignoredHosts
+            )
+        }
+//        .initCompleted { resolver, rest in
+//            rest.setAuthProvider(resolver.resolve(Provider.self)!)
+//        }.inObjectScope(.container)
     }
 
     private func assembleCustomServices(_ container: Container) {

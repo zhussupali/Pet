@@ -9,6 +9,14 @@ import Foundation
 import Alamofire
 import Promises
 
+private enum Constants {
+    static let jsonDecoder: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        return decoder
+    }()
+}
+
 extension DataRequest {
     @discardableResult
     func toPromise<Response: Decodable>() -> Promise<Response> {
