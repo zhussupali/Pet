@@ -4,6 +4,7 @@ workspace 'Pet'
 
 def application_pods
   pod 'Swinject', '2.7.1'
+  pod 'SnapKit', '5.6.0'
   
   core_pods
   providers_pods

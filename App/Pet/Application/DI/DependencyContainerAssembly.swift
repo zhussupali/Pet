@@ -25,6 +25,9 @@ final class DependencyContainerAssembly: Assembly {
 //        .initCompleted { resolver, rest in
 //            rest.setAuthProvider(resolver.resolve(Provider.self)!)
 //        }.inObjectScope(.container)
+        container.register(Provider.self) { resolver in
+            Provider(rest: resolver.resolve(AlamofireNetwork.self)!)
+        }
     }
 
     private func assembleCustomServices(_ container: Container) {
