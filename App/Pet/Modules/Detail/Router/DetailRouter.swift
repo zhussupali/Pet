@@ -8,23 +8,24 @@
 import Foundation
 import UIKit
 
-protocol DetailRouterInput {
-    static func assemble() -> DetailView
-}
+protocol DetailRouterInput { }
 
-class DetailRouter: DetailRouterInput {
-    var viewCtrl: UIViewController
+final class DetailRouter {
+    private var viewCtrl: UIViewController
     
     init(viewCtrl: UIViewController) {
         self.viewCtrl = viewCtrl
     }
     
-    static func assemble() -> DetailView {
-        let view = DetailView()
+    static func assemble() -> DetailViewController {
+        let view = DetailViewController()
         let router = DetailRouter(viewCtrl: view)
         let presenter = DetailPresenter(view: view, router: router)
         view.presenter = presenter
         return view
     }
-    
 }
+
+// MARK: - DetailRouterInput
+
+extension DetailRouter: DetailRouterInput {}

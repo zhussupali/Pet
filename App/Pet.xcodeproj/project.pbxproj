@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6010384D2AD5B0BB00E6A3AB /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6010383F2AD5B0BB00E6A3AB /* DetailPresenter.swift */; };
-		6010384E2AD5B0BB00E6A3AB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601038412AD5B0BB00E6A3AB /* DetailView.swift */; };
+		6010384E2AD5B0BB00E6A3AB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601038412AD5B0BB00E6A3AB /* DetailViewController.swift */; };
 		6010384F2AD5B0BB00E6A3AB /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601038432AD5B0BB00E6A3AB /* DetailRouter.swift */; };
 		601038502AD5B0BB00E6A3AB /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601038462AD5B0BB00E6A3AB /* HomeRepository.swift */; };
 		601038512AD5B0BB00E6A3AB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601038482AD5B0BB00E6A3AB /* HomePresenter.swift */; };
@@ -50,7 +50,7 @@
 		5227E75E7909DD21C42BAA01 /* Pods-Pet.stage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pet.stage.xcconfig"; path = "../../Pods/Target Support Files/Pods-Pet/Pods-Pet.stage.xcconfig"; sourceTree = "<group>"; };
 		5B4CADF985B3CE5CBE15130F /* Pods_Pet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6010383F2AD5B0BB00E6A3AB /* DetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
-		601038412AD5B0BB00E6A3AB /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		601038412AD5B0BB00E6A3AB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		601038432AD5B0BB00E6A3AB /* DetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		601038462AD5B0BB00E6A3AB /* HomeRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		601038482AD5B0BB00E6A3AB /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				6010383E2AD5B0BB00E6A3AB /* Presenter */,
-				601038402AD5B0BB00E6A3AB /* View */,
+				601038402AD5B0BB00E6A3AB /* ViewController */,
 				601038422AD5B0BB00E6A3AB /* Router */,
 			);
 			path = Detail;
@@ -109,12 +109,12 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		601038402AD5B0BB00E6A3AB /* View */ = {
+		601038402AD5B0BB00E6A3AB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				601038412AD5B0BB00E6A3AB /* DetailView.swift */,
+				601038412AD5B0BB00E6A3AB /* DetailViewController.swift */,
 			);
-			path = View;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		601038422AD5B0BB00E6A3AB /* Router */ = {
@@ -200,7 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				60495C012A62BFAB004ADB9F /* Application */,
-				60495C062A62C069004ADB9F /* Flows */,
+				60495C062A62C069004ADB9F /* Modules */,
 				60495C022A62BFE5004ADB9F /* Resources */,
 			);
 			path = Pet;
@@ -253,13 +253,13 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		60495C062A62C069004ADB9F /* Flows */ = {
+		60495C062A62C069004ADB9F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				601038442AD5B0BB00E6A3AB /* Home */,
 				6010383D2AD5B0BB00E6A3AB /* Detail */,
 			);
-			path = Flows;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		60495C2B2A62CB7A004ADB9F /* Configurators */ = {
@@ -417,7 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6010384E2AD5B0BB00E6A3AB /* DetailView.swift in Sources */,
+				6010384E2AD5B0BB00E6A3AB /* DetailViewController.swift in Sources */,
 				60495C2D2A62CBB3004ADB9F /* StartupAppDelegateConfiguator.swift in Sources */,
 				601038512AD5B0BB00E6A3AB /* HomePresenter.swift in Sources */,
 				60495C302A62CEB7004ADB9F /* DependencyContainerAssembly.swift in Sources */,

@@ -10,12 +10,11 @@ import UIKit
 import Providers
 
 protocol HomeRouterInput {
-    static func assemble() -> HomeViewController
     func showDetail()
 }
 
-class HomeRouter: HomeRouterInput {
-    var viewCtrl: UIViewController
+final class HomeRouter {
+    private var viewCtrl: UIViewController
     
     init(viewCtrl: UIViewController) {
         self.viewCtrl = viewCtrl
@@ -29,7 +28,11 @@ class HomeRouter: HomeRouterInput {
         view.presenter = presenter
         return view
     }
-    
+}
+
+// MARK: - HomeRouterInput
+
+extension HomeRouter: HomeRouterInput {
     func showDetail() {
         let detail = DetailRouter.assemble()
         viewCtrl.navigationController?.pushViewController(detail, animated: true)

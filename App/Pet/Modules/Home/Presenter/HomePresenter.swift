@@ -24,6 +24,8 @@ final class HomePresenter {
     }
 }
 
+// MARK: - HomePresenterInput
+
 extension HomePresenter: HomePresenterInput {
     func didTapRoute() {
         router.showDetail()

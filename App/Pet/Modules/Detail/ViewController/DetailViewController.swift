@@ -1,5 +1,5 @@
 //
-//  DetailView.swift
+//  DetailViewController.swift
 //  Qwe
 //
 //  Created by Zhussupali Salamat on 21.08.2022.
@@ -7,11 +7,9 @@
 
 import UIKit
 
-protocol DetailViewInput: AnyObject {
-    
-}
+protocol DetailViewControllerInput: AnyObject { }
 
-final class DetailView: UIViewController {
+final class DetailViewController: UIViewController {
     var presenter: DetailPresenterInput?
     
     override func viewDidLoad() {
@@ -20,6 +18,6 @@ final class DetailView: UIViewController {
     }
 }
 
-extension DetailView: DetailViewInput {
-    
-}
+// MARK: - DetailViewControllerInput
+
+extension DetailViewController: DetailViewControllerInput { }
