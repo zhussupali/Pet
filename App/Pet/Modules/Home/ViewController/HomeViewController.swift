@@ -7,12 +7,17 @@
 
 import UIKit
 
-protocol HomeViewControllerInput: AnyObject {
+protocol HomeViewInput: AnyObject {
     func updateLabel(text: String)
 }
 
+protocol HomeViewOutput {
+    func didTapRoute()
+    func didTapFetch()
+}
+
 final class HomeViewController: UIViewController {
-    var presenter: HomePresenterInput?
+    var output: HomeViewOutput?
     
     private let label: UILabel = {
         let label = UILabel()
@@ -43,11 +48,11 @@ final class HomeViewController: UIViewController {
     }
     
     @objc private func routeButtonDidTap() {
-        presenter?.didTapRoute()
-    }    
+        output?.didTapRoute()
+    }
     
     @objc private func fetchButtonDidTap() {
-        presenter?.didTapFetch()
+        output?.didTapFetch()
     }
     
     private func setView() {
@@ -73,7 +78,7 @@ final class HomeViewController: UIViewController {
 
 // MARK: - HomeViewControllerInput
 
-extension HomeViewController: HomeViewControllerInput {
+extension HomeViewController: HomeViewInput {
     func updateLabel(text: String) {
         label.text = text
     }

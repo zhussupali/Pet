@@ -25,7 +25,7 @@ final class HomeRouter {
         let router = HomeRouter(viewCtrl: view)
         let repository = HomeRepository(provider: Dependency.resolver.resolve(Provider.self)!)
         let presenter = HomePresenter(view: view, repository: repository, router: router)
-        view.presenter = presenter
+        view.output = presenter
         return view
     }
 }

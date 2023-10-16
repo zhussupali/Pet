@@ -7,10 +7,12 @@
 
 import UIKit
 
-protocol DetailViewControllerInput: AnyObject { }
+protocol DetailViewInput: AnyObject { }
+
+protocol DetailViewOutput { }
 
 final class DetailViewController: UIViewController {
-    var presenter: DetailPresenterInput?
+    var output: DetailViewOutput?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,4 +22,4 @@ final class DetailViewController: UIViewController {
 
 // MARK: - DetailViewControllerInput
 
-extension DetailViewController: DetailViewControllerInput { }
+extension DetailViewController: DetailViewInput { }

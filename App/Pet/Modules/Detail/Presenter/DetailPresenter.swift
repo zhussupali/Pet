@@ -7,13 +7,11 @@
 
 import Foundation
 
-protocol DetailPresenterInput { }
-
 final class DetailPresenter {
-    private weak var view: DetailViewControllerInput?
+    private weak var view: DetailViewInput?
     private let router: DetailRouterInput
     
-    init(view: DetailViewControllerInput, router: DetailRouterInput) {
+    init(view: DetailViewInput, router: DetailRouterInput) {
         self.view = view
         self.router = router
     }
@@ -21,4 +19,4 @@ final class DetailPresenter {
 
 // MARK: - DetailPresenterInput
 
-extension DetailPresenter: DetailPresenterInput { }
+extension DetailPresenter: DetailViewOutput { }

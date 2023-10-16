@@ -7,17 +7,12 @@
 
 import Foundation
 
-protocol HomePresenterInput {
-    func didTapRoute()
-    func didTapFetch()
-}
-
 final class HomePresenter {
-    private weak var view: HomeViewControllerInput?
+    private weak var view: HomeViewInput?
     private let repository: HomeRepository
     private let router: HomeRouterInput
     
-    init(view: HomeViewControllerInput, repository: HomeRepository, router: HomeRouterInput) {
+    init(view: HomeViewInput, repository: HomeRepository, router: HomeRouterInput) {
         self.view = view
         self.repository = repository
         self.router = router
@@ -26,7 +21,7 @@ final class HomePresenter {
 
 // MARK: - HomePresenterInput
 
-extension HomePresenter: HomePresenterInput {
+extension HomePresenter: HomeViewOutput {
     func didTapRoute() {
         router.showDetail()
     }

@@ -21,7 +21,7 @@ final class DetailRouter {
         let view = DetailViewController()
         let router = DetailRouter(viewCtrl: view)
         let presenter = DetailPresenter(view: view, router: router)
-        view.presenter = presenter
+        view.output = presenter
         return view
     }
 }
