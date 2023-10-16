@@ -2,8 +2,6 @@ import Core
 import Providers
 import Swinject
 
-public typealias DependencyContainer = Resolver
-
 final class DependencyContainerAssembly: Assembly {
     func assemble(container: Container) {
         assembleCustomServices(container)

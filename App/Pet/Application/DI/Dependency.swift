@@ -8,6 +8,12 @@
 import Foundation
 import Swinject
 
-final class Dependency {
-    static let resolver = Assembler([DependencyContainerAssembly()]).resolver
+final class DependencyContainer {
+    private static let resolver = Assembler([DependencyContainerAssembly()]).resolver
+    
+    private init() {}
+    
+    static func resolve<Service>(_ serviceType: Service.Type) -> Service {
+        resolver.resolve(serviceType)!
+    }
 }

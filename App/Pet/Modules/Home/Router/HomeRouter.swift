@@ -23,7 +23,7 @@ final class HomeRouter {
     static func assemble() -> HomeViewController {
         let view = HomeViewController()
         let router = HomeRouter(viewCtrl: view)
-        let repository = HomeRepository(provider: Dependency.resolver.resolve(Provider.self)!)
+        let repository = HomeRepository(provider: DependencyContainer.resolve(Provider.self))
         let presenter = HomePresenter(view: view, repository: repository, router: router)
         view.output = presenter
         return view
