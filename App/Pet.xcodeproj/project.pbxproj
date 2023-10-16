@@ -14,7 +14,7 @@
 		601038512AD5B0BB00E6A3AB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601038482AD5B0BB00E6A3AB /* HomePresenter.swift */; };
 		601038522AD5B0BB00E6A3AB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6010384A2AD5B0BB00E6A3AB /* HomeViewController.swift */; };
 		601038532AD5B0BB00E6A3AB /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6010384C2AD5B0BB00E6A3AB /* HomeRouter.swift */; };
-		601038552AD5B25A00E6A3AB /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601038542AD5B25A00E6A3AB /* Dependency.swift */; };
+		601038552AD5B25A00E6A3AB /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601038542AD5B25A00E6A3AB /* DependencyContainer.swift */; };
 		60495B282A62BD17004ADB9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60495B272A62BD17004ADB9F /* AppDelegate.swift */; };
 		60495B312A62BD17004ADB9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60495B302A62BD17004ADB9F /* Assets.xcassets */; };
 		60495B342A62BD17004ADB9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60495B322A62BD17004ADB9F /* LaunchScreen.storyboard */; };
@@ -56,7 +56,7 @@
 		601038482AD5B0BB00E6A3AB /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		6010384A2AD5B0BB00E6A3AB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6010384C2AD5B0BB00E6A3AB /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
-		601038542AD5B25A00E6A3AB /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
+		601038542AD5B25A00E6A3AB /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		6032BE722A6572E8001729A7 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		6032BE732A6572F4001729A7 /* Stage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Stage.xcconfig; sourceTree = "<group>"; };
 		6032BE752A657310001729A7 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
@@ -275,7 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				60495C2F2A62CEB7004ADB9F /* DependencyContainerAssembly.swift */,
-				601038542AD5B25A00E6A3AB /* Dependency.swift */,
+				601038542AD5B25A00E6A3AB /* DependencyContainer.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -422,7 +422,7 @@
 				601038512AD5B0BB00E6A3AB /* HomePresenter.swift in Sources */,
 				60495C302A62CEB7004ADB9F /* DependencyContainerAssembly.swift in Sources */,
 				6010384D2AD5B0BB00E6A3AB /* DetailPresenter.swift in Sources */,
-				601038552AD5B25A00E6A3AB /* Dependency.swift in Sources */,
+				601038552AD5B25A00E6A3AB /* DependencyContainer.swift in Sources */,
 				6010384F2AD5B0BB00E6A3AB /* DetailRouter.swift in Sources */,
 				60495B282A62BD17004ADB9F /* AppDelegate.swift in Sources */,
 				60495C2A2A62C57D004ADB9F /* AppDelegateConfiguratorFactory.swift in Sources */,

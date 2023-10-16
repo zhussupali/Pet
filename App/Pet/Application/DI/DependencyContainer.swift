@@ -1,5 +1,5 @@
 //
-//  Dependency.swift
+//  DependencyContainer.swift
 //  Pet
 //
 //  Created by Zhussupali on 10.10.2023.
