@@ -76,7 +76,7 @@ final class HomeViewController: UIViewController {
     }
 }
 
-// MARK: - HomeViewControllerInput
+// MARK: - HomeViewInput
 
 extension HomeViewController: HomeViewInput {
     func updateLabel(text: String) {

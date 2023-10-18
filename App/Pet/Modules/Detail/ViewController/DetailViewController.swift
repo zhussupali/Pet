@@ -20,6 +20,6 @@ final class DetailViewController: UIViewController {
     }
 }
 
-// MARK: - DetailViewControllerInput
+// MARK: - DetailViewInput
 
 extension DetailViewController: DetailViewInput { }

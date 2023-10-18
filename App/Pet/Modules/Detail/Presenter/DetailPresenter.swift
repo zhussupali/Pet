@@ -17,6 +17,6 @@ final class DetailPresenter {
     }
 }
 
-// MARK: - DetailPresenterInput
+// MARK: - DetailViewOutput
 
 extension DetailPresenter: DetailViewOutput { }

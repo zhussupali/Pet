@@ -19,7 +19,7 @@ final class HomePresenter {
     }
 }
 
-// MARK: - HomePresenterInput
+// MARK: - HomeViewOutput
 
 extension HomePresenter: HomeViewOutput {
     func didTapRoute() {
